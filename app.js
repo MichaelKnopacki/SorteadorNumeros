@@ -21,7 +21,6 @@ function sortear(){
 
     for(let i=0; i < quantidade; i++){
         numero = obterNumeroAletorio(inicio,fim);
-        
         while (sorteados.includes(numero)){
             numero = obterNumeroAletorio(inicio,fim);
         }
@@ -54,7 +53,6 @@ function reiniciar(){
 }
 
 function obterNumeroAletorio(min, max){
-    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)
